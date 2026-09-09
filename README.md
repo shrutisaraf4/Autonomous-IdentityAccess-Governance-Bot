@@ -1,3 +1,7 @@
+
+<img width="1456" height="720" alt="image_60c52864" src="https://github.com/user-attachments/assets/74e4cfa0-0f78-4bcd-b76f-ab185059f642" />
+
+
 # Autonomous Identity & Access Governance Bot
 
 An enterprise-grade, event-driven identity governance framework built using **Azure Functions (Python)** and **Microsoft Graph API**. This system continuously audits **Microsoft Entra ID** tenants to identify identity anomalies, alerts security operations teams via **Microsoft Teams Adaptive Cards**, and processes one-click administrator approval workflows to execute real-time, zero-trust cloud remediations.
@@ -104,12 +108,13 @@ layout).
 | `TENANT_ID` | *Your Microsoft Entra Tenant ID* | 
 | `CLIENT_ID` | *Your registered App's Application ID (Client ID)* |
 | `CLIENT_SECRET` | *Your App's Client Secret String Value* |
-| `TEAMS_WORKHOOK_URL` | *The Workflow URL you copied from Microsoft Teams* |
+| `TEAMS_WEBHOOK_URL` | *The Workflow URL you copied from Microsoft Teams* |
 <img width="1923" height="862" alt="image" src="https://github.com/user-attachments/assets/6e00b455-83a1-47a7-8a69-ad2e8829114e" />
 <img width="1651" height="837" alt="image" src="https://github.com/user-attachments/assets/e74effdc-786e-436b-9442-2fc960bbef16" />
 <img width="1477" height="852" alt="image" src="https://github.com/user-attachments/assets/9390022d-a076-40c0-ba76-1afc600f4f9a" />
 <img width="1706" height="725" alt="image" src="https://github.com/user-attachments/assets/379cb0dd-2e6d-474c-bb2d-dfb8f16ec70e" />
 <img width="1647" height="816" alt="image" src="https://github.com/user-attachments/assets/9f23116d-4fb1-40aa-af09-8c0400d4eac0" />
+<img width="1662" height="767" alt="image" src="https://github.com/user-attachments/assets/a7ac3900-f38f-46af-9a1c-60cebdf490ad" />
 
 4. Click **Apply** or **Save** at the bottom of the configuration blade, then click **Confirm**. This instantly restarts your Function App to load the 
 variables safely.
@@ -460,19 +465,21 @@ Because a new sandbox tenant does not contain old historical data, create a gues
 4. Fill out these profile properties:
    * **Email address:** Use a separate personal account you own (e.g., a personal `@gmail.com`).
    * **Display name:** `Test Dormant Guest`
-   * **User type:** Ensure it is strictly set to **Guest**.
+   * **User type:** Ensure it is strictly set to **Guest**.<img width="1560" height="850" alt="image" src="https://github.com/user-attachments/assets/78248f76-aa9d-4bcc-acbc-df588a294115" />
 5. Click **Invite**.
-6. Open a private incognito browser window, log into your personal email inbox, locate the invitation message from Microsoft, and click the verification link to accept the invite. **Stop there—do not attempt to log in further.**
+6. Open a private incognito browser window, log into your personal email inbox, locate the invitation message from Microsoft, and click the verification link to accept the invite. **Stop there—do not attempt to log in further.** <img width="1607" height="856" alt="image" src="https://github.com/user-attachments/assets/5afcc4a8-c653-482a-9114-83bc45d85083" />
+
 
 #### Step 2: Manually Trigger Your Audit Engine
 Instead of waiting for the midnight schedule trigger, force the function app to execute right now.
 1. Open the [Azure Portal](https://azure.com) and go to your **Function App** dashboard.
 2. In the left navigation menu, look under the **Functions** section and click **Functions**.
-3. Click on your timer module: **IdentityAuditTimer**.
+3. Click on your timer module: **IdentityAuditTimer**.<img width="1922" height="855" alt="image" src="https://github.com/user-attachments/assets/68c18729-3d4a-4f2b-a937-ca860e3867a8" />
 4. In its inner left sidebar, select **Code + Test**.
 5. Click the **Test/Run** button located on the top command strip.
-6. A configurations panel will slide out from the right side of the screen. Leave the request input body completely empty and click the green **Run** button at the bottom.
+6. A configurations panel will slide out from the right side of the screen. Leave the request input body completely empty and click the green **Run** button at the bottom.<img width="1917" height="929" alt="image" src="https://github.com/user-attachments/assets/59586fc8-3582-4d13-ab84-d25c9aaa067c" />
 7. Watch the **Logs** streaming console window at the bottom. Confirm that the script logs show a successful Graph API connection, identify your test guest user, and send an alert notification payload to Teams.
+<img width="1461" height="192" alt="image" src="https://github.com/user-attachments/assets/3fadf3e7-54ae-4eb7-a7da-1a2c06b72117" />
 
 #### Step 3: Verify the Security Alert in Microsoft Teams
 1. Open your **Microsoft Teams** application client.
