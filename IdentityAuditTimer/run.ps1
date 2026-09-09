@@ -5,7 +5,7 @@ using namespace System.Net
 $TenantId = $env:TENANT_ID
 $ClientId = $env:CLIENT_ID
 $ClientSecret = $env:CLIENT_SECRET
-$TeamsWebhookUrl = $env:TEAMS_WORKHOOK_URL
+$TeamsWebhookUrl = $env:TEAMS_WEBHOOK_URL
 
 
 # 2. Authenticate securely with Microsoft Graph API
